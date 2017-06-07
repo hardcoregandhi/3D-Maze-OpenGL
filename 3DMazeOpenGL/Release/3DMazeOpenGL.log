@@ -1,0 +1,8 @@
+﻿  GroundPlane.cpp
+  main.cpp
+main.cpp(31): warning C4101: 'myargv': unreferenced local variable
+  Generating code
+  All 256 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  3DMazeOpenGL.vcxproj -> F:\Projects\3DMazeOpenGL\Release\3DMazeOpenGL.exe
+  3DMazeOpenGL.vcxproj -> F:\Projects\3DMazeOpenGL\Release\3DMazeOpenGL.pdb (Full PDB)

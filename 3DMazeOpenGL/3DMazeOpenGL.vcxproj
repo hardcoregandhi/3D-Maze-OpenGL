@@ -111,7 +111,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="GroundPlane.cpp" />
+    <ClCompile Include="MazeCube.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Player.cpp" />
   </ItemGroup>
@@ -122,7 +122,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Controls.h" />
-    <ClInclude Include="GroundPlane.h" />
+    <ClInclude Include="MazeCube.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Shader.h" />
   </ItemGroup>

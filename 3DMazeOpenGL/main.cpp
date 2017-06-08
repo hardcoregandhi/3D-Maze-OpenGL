@@ -10,7 +10,7 @@
 #include <glm\gtc\matrix_transform.hpp>
 
 #include "Shader.h"
-#include "GroundPlane.h"
+#include "MazeCube.h"
 #include "Player.h"
 
 using namespace glm;
@@ -126,7 +126,7 @@ int main()
 	vec3 playerColour = vec3(1.0f, 0.0f, 0.0f);
 	vec3 goalColour = vec3(0.0f, 1.0f, 0.0f);
 
-	GroundPlane* groundPlane = new GroundPlane(colourShaderColourID);
+	MazeCube* mazeCube = new MazeCube(colourShaderColourID);
 	Player* player = new Player(colourShaderColourID);
 
 	do {
@@ -160,7 +160,7 @@ int main()
 					model = glm::translate(model, vec3(i*2, 0, j*2));
 
 					glUniformMatrix4fv(colourShaderModelID, 1, GL_FALSE, &model[0][0]);
-					groundPlane->Draw(vec3(i*10, 0, j*10), colourShaderColourID, mazeColour);
+					mazeCube->Draw(vec3(i*10, 0, j*10), colourShaderColourID, mazeColour);
 				}
 				else if (maze[i][j] == 5) //player
 				{
@@ -181,7 +181,7 @@ int main()
 					glUniform3f(colourShaderColourID, 1.0f, 0.0f, 0.0f);
 
 					glUniformMatrix4fv(colourShaderModelID, 1, GL_FALSE, &model[0][0]);
-					groundPlane->Draw(vec3(i * 10, 0, j * 10), colourShaderColourID, goalColour);
+					mazeCube->Draw(vec3(i * 10, 0, j * 10), colourShaderColourID, goalColour);
 				}
 			}
 		}
@@ -193,7 +193,7 @@ int main()
 	while (glfwGetKey(window, GLFW_KEY_ESCAPE) != GLFW_PRESS &&
 		glfwWindowShouldClose(window) == 0);
 
-	delete groundPlane;
+	delete mazeCube;
 	delete player;
 
 	//system("PAUSE");
